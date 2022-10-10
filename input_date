@@ -1,0 +1,15 @@
+from datetime import datetime
+from datetime import timedelta
+given_date = input("Enter date:")
+# given_date = '09/16/2022'
+print('Given Date: ', given_date)
+# Create datetime object from date string
+date_format = '%m/%d/%Y'
+dtObj = datetime.strptime(given_date, date_format)
+# Add 10 days to a given datetime object
+n = 45
+future_date = dtObj + timedelta(days=n)
+# print('Future Date: ', future_date)
+# print('Future Date: ', future_date.date())
+future_date_str = future_date.strftime(date_format)
+print('45 days from Date of Purchase: ', future_date_str)
