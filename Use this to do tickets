@@ -1,0 +1,16 @@
+from datetime import datetime
+from datetime import timedelta
+given_date = input("Enter Date Order Was Placed: ")
+print(' Date Order Was Placed:', given_date)
+# Create datetime object from date string
+date_format = '%m/%d/%Y'
+dtObj = datetime.strptime(given_date, date_format)
+# Add 10 days to a given datetime object
+n = 45
+future_date = dtObj + timedelta(days=n)
+# print('Future Date: ', future_date)
+# print('Future Date: ', future_date.date())
+future_date_str = future_date.strftime(date_format)
+print('EMAIL: Once the label is printed you have till:', future_date_str)
+ 
+print('TICKET: Return by DATE ' , future_date_str + ' Emailed Customer. Return Label plus date for return sent to customer. Added price on Return_Shipment Item. Full Order :PC / Partial Order : PC ')
